@@ -16,11 +16,12 @@ const getLiveData = async () => {
     const response = await fetch(fetchUrl, {
       headers: {
         "X-APIKEY": HOLODEX_API_KEY
-      }
+      },
+      cache: 'no-store'
     });
     const live = await response.json();
-    console.log("data.ts: ");
-    console.log(live[0]);
+    //console.log("data.ts: ");
+    //console.log(live[0]);
     return live;
   } catch (error) {
     console.log(error)

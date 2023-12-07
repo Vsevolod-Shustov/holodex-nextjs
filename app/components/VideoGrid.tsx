@@ -14,12 +14,13 @@ type Video = {
   channel: object
 }
 
-export default async function VideoGrid({ videos }: { videos: Function }) {
+export default function VideoGrid({ videos }: { videos: Array<Video> }) {
   //const [videos] = useAtom(liveData)
   // console.log("VideoGrid:");
   // console.log(data[0]);
   //const data = await getLiveData();
-  const data = await videos();
+  //const data = await getVideos();
+  const data = videos;
 
   return (
     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
