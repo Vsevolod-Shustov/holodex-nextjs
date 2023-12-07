@@ -12,7 +12,8 @@ const getLiveData = async () => {
     let fetchUrl = new URL(apiUrl)
     const org = queryOrg
     if (org !== "All") { fetchUrl.searchParams.append("org", org) }
-    console.log(fetchUrl);
+    //console.log(fetchUrl);
+    //console.log(fetchUrl);
     const response = await fetch(fetchUrl, {
       headers: {
         "X-APIKEY": HOLODEX_API_KEY
