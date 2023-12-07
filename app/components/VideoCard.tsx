@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useEffect, useMemo, useState } from "react"
 
 export default function VideoCard(props: any) {
@@ -61,7 +62,7 @@ export default function VideoCard(props: any) {
                     </div>
                     <div>
                         <div className="max-h-10 leading-5 line-clamp-2">
-                            <a href={`watch/${props.video.id}`}>{props.video.title}</a>
+                            <Link href={`watch/${props.video.id}`}>{props.video.title}</Link>
                         </div>
                         <div>
                             <a
