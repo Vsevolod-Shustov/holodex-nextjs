@@ -26,7 +26,7 @@ export default function VideoGrid({ videos }: { videos: Array<Video> }) {
   return (
     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <OrgSelectorDropdown></OrgSelectorDropdown>
-      {data.map((video: Video) => <VideoCard key={video.id} video={video}></VideoCard>)}
+      {data?.map((video: Video) => <VideoCard key={video.id} video={video}></VideoCard>)}
     </div>
   )
 }
