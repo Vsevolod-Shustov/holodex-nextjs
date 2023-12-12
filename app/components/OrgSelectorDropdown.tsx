@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Dropdown from "@/app/ui/Dropdown";
+import { queryOrg } from "@/app/components/Videos";
+import { useAtom } from "jotai";
 
 const items = [
   { title: "All Vtubers", value: "All" },
@@ -11,10 +13,10 @@ const items = [
   { title: "Nijisanji", value: "Nijisanji" },
 ]
 
-const queryOrg = "Hololive"
+//const queryOrg = "Hololive"
 
 export default function OrgSelectorDropdown() {
-  const [org, setOrg] = useState(queryOrg)
+  const [org, setOrg] = useAtom(queryOrg)
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
