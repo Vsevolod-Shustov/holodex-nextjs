@@ -1,16 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react'
-import { atom, useAtom } from 'jotai';
+import { useAtom } from 'jotai';
 import VideoGrid from '@/app/components/VideoGrid';
 
+import { queryOrgAtom } from '@/app/atoms/queryOrgAtom';
 import { getLiveData } from '@/app/lib/actions';
-
-export const queryOrg = atom<string>("Hololive")
 
 
 export default function Videos() {
-  const [org] = useAtom(queryOrg);
+  const [org] = useAtom(queryOrgAtom);
   const [liveData, setLiveData] = useState(null);
   useEffect(() => {
     const getData = async () => {
