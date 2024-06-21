@@ -1,12 +1,12 @@
 import Header from '@/app/components/Header'
-import Videos from '@/app/components/Videos';
+import VideoGrid from '@/app/components/VideoGrid';
 
 export default function Page() {
   return (
     <div>
       <Header></Header>
       <div className='content p-4 '>
-        <Videos></Videos>
+        <VideoGrid></VideoGrid>
       </div >
     </div>
   )
