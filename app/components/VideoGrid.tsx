@@ -1,8 +1,6 @@
-//import { useAtom } from 'jotai'
 import VideoCard from "@/app/components/VideoCard";
 import OrgSelectorDropdown from "@/app/components/OrgSelectorDropdown";
-//import { liveData, getLiveData } from "@/app/lib/data";
-// let data = await liveData;
+
 type Video = {
   id: string,
   title: string,
